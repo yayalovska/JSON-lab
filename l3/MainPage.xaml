@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="l3.MainPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="2*" />
+        </Grid.ColumnDefinitions>
+
+        <!-- The left part of the screen is for data entry and buttons -->
+        <StackLayout Grid.Column="0" Spacing="25" Padding="30,0" VerticalOptions="CenterAndExpand">
+             <Label x:Name="enterLabel" Text="Working with data" FontSize="22" HorizontalOptions="Center" />
+
+            <Entry x:Name="nameEntry" Placeholder="Event Name" />
+            <Entry x:Name="facultyEntry" Placeholder="Faculty" />
+            <Entry x:Name="departmentEntry" Placeholder="Department" />
+            <Entry x:Name="specialtyEntry" Placeholder="Specialty" />
+            <Entry x:Name="timingEntry" Placeholder="Timing" />
+
+            <Button x:Name="addButton" Text="Add Event" Clicked="OnAddClicked" />
+            <Button x:Name="updateButton" Text="Update Event" Clicked="OnUpdateClicked" />
+            <Button x:Name="deleteButton" Text="Delete Event" Clicked="OnDeleteClicked" />
+        </StackLayout>
+
+        <!-- The right part of the screen displays the list and additional options -->
+        <StackLayout Grid.Column="1" Spacing="25" Padding="30,0" HorizontalOptions="CenterAndExpand" >
+            <Label x:Name="resultLabel" Text="Results will appear under here" FontSize="22" Margin="20" HorizontalOptions="Center" />
+
+            <ListView x:Name="eventsListView" ItemSelected="OnItemSelected" SelectionMode="Single">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Name}" Detail="{Binding Department}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <StackLayout Orientation="Horizontal" VerticalOptions="Start" HorizontalOptions="Center" Spacing="30" Margin="120">
+                <Button x:Name="openFileButton" Text="Open File" Clicked="OnOpenFileClicked" HeightRequest="60" WidthRequest="150"/>
+                <Button x:Name="saveButton" Text="Save Changes" Clicked="OnSaveClicked" WidthRequest="150"/>
+                <Button x:Name="clearButton" Text="Clear" Clicked="OnClearClicked" WidthRequest="150"/>
+                <Button x:Name="exitButton" Text="Exit Programme" Clicked="OnExitButtonClicked" WidthRequest="150"/>
+            </StackLayout>
+        </StackLayout>
+    </Grid>
+</ContentPage>

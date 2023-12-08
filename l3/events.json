@@ -1,0 +1,37 @@
+[
+    {
+        "Name": "Student Council Meeting",
+        "Faculty": "FCSC",
+        "Department": "Department 1",
+        "Specialty": "Computer Science",
+        "Timing": "14:00 - 16:00"
+    },
+    {
+        "Name": "Debating Competition",
+        "Faculty": "FCSC",
+        "Department": "Department 2",
+        "Specialty": "Applied Mathematics",
+        "Timing": "10:00 - 14:00"
+    },
+    {
+        "Name": "Leadership Workshop",
+        "Faculty": "FEAS",
+        "Department": "Department 3",
+        "Specialty": "Civil Engineering",
+        "Timing": "09:00 - 12:00"
+    },
+    {
+        "Name": "Cultural Exchange",
+        "Faculty": "FASS",
+        "Department": "Department 4",
+        "Specialty": "Psychology",
+        "Timing": "13:30 - 18:30"
+    },
+    {
+        "Name": "Environmental Awareness Campaign",
+        "Faculty": "FMS",
+        "Department": "Department 5",
+        "Specialty": "Environmental Science",
+        "Timing": "16:00 - 18:00"
+    }
+]
